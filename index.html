@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staysure Quote Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header id="main-header">
+    <div class="header-inner">
+      <div class="logo">Staysure</div>
+    </div>
+  </header>
+
+  <!-- Progress Bar Section -->
+  <div id="progress-wrapper" class="hidden">
+    <div class="progress-inner">
+      <div class="progress-container" id="progress-container">
+        <!-- Progress Steps Generated dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Premium Price Banner (Visible from Step 6) -->
+  <div id="sticky-price-banner" class="sticky-banner hidden">
+    <div class="banner-content">
+      <div class="price-info">
+        <span class="price-label">Estimated Price</span>
+        <h2 class="price-value" id="persistent-price">€0.00</h2>
+      </div>
+      <button class="btn btn-secondary btn-sm" id="btn-whats-included">What's included?</button>
+    </div>
+  </div>
+
+  <!-- Modal for What's Included -->
+  <div id="whats-included-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Cover Summary</h3>
+        <button id="close-modal-btn" class="close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <ul class="cover-list">
+          <li><span>Medical Emergency:</span> <strong>Up to €10m</strong></li>
+          <li><span>Cancellation:</span> <strong>Up to €5,000</strong></li>
+          <li><span>Baggage:</span> <strong>Up to €2,000</strong></li>
+          <li><span>Personal Liability:</span> <strong>Up to €2m</strong></li>
+          <li><span>24/7 Support:</span> <strong>Included</strong></li>
+        </ul>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 16px;">
+          Note: Final cover limits may vary based on pre-existing medical conditions disclosed.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notifications -->
+  <div id="toast-container"></div>
+
+  <main id="app-container">
+    <!-- View content is injected here by app.js -->
+  </main>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
